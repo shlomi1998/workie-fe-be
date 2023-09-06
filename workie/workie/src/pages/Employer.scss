@@ -1,0 +1,271 @@
+.addingWork {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(220, 220, 220);
+
+  &__button {
+    position: absolute;
+    bottom: 105px;
+    left: 50px;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    background-color: rgb(245, 244, 244);
+    border: none;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px 5px #a0a0a0;
+
+    .iconPlus {
+      font-size: 27.5px;
+      font-weight: bold;
+      z-index: 1;
+    }
+  }
+
+  &__button:hover {
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+  }
+
+  &__myWork {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 78%;
+    padding-bottom: 82px;
+    overflow-y: scroll;
+
+    &__div {
+      position: relative;
+      padding: 18px;
+      margin: 10px auto;
+      width: 88vw;
+      height: 105px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 20px;
+
+      &__userPhoto {
+        cursor: pointer;
+        position: absolute;
+        top: 7px;
+        right: 20px;
+        width: 38px;
+        height: 38px;
+        border-radius: 100%;
+        border: 1px solid black;
+      }
+
+      &__typeWork {
+        position: absolute;
+        top: 32px;
+        right: 18px;
+        font-size: large;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-weight: bold;
+      }
+
+      &__jobDescription {
+        position: absolute;
+        top: 74px;
+        right: 13px;
+        padding: 5px 10px 38px 10px;
+        height: 20px;
+        border-radius: 10px;
+        // border: 1px solid #66fecc;
+        background-color: rgba(192, 192, 192, 0.582);
+        width: 200px;
+        /* Set the width of the container div */
+        overflow-y: scroll;
+
+        .span {
+          position: relative;
+          margin-bottom: 80px;
+          right: -10px;
+          word-wrap: break-word;
+          overflow: hidden;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+        }
+      }
+
+      &__iconTrash {
+        position: absolute;
+        left: 25px;
+        color: rgb(253, 114, 114);
+      }
+
+      &__iconTrash:hover {
+        color: rgb(251, 52, 52);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        transform: scale(1.2) translate(0, 0);
+        transform-origin: center center;
+      }
+
+      &__location {
+        position: absolute;
+        top: 32px;
+        left: 25px;
+        font-size: large;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-weight: bolder;
+
+        .fa-location-dot {
+          color: #a0a0a0;
+          font-size: small;
+        }
+      }
+
+      &__date {
+        position: absolute;
+        top: 60px;
+        left: 28px;
+      }
+
+      &__workHours {
+        position: absolute;
+        top: 80px;
+        left: 28px;
+      }
+
+      &__hourlyWage {
+        position: absolute;
+        top: 100px;
+        left: 28px;
+
+        .fa-shekel-sign {
+          padding-left: 5px;
+          font-size: small;
+          color: #5a5959;
+        }
+      }
+    }
+  }
+
+  .addingWork__deleteJob {
+    background-color: #5ce3b6;
+    position: absolute;
+    padding-top: 2.5%;
+    border: 3px solid #202c4a;
+    width: 350px;
+    height: 160px;
+    color: #000000;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    margin: auto;
+    // box-shadow: 0px 0px 30px 10px #a0a0a0;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__title {
+      font-size: xx-large;
+    }
+    &__iconTrash {
+      display: none;
+      color: #f69e9e;
+      margin-top: 20%;
+      margin-left: 40%;
+      font-size: 60px;
+      animation: grow-shrink 2s infinite;
+    }
+
+    @keyframes grow-shrink {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    &__buttonApproval {
+      position: absolute;
+      font-size: medium;
+      top: 50%;
+      right: 8%;
+      padding: 12px;
+      padding-left: 12px;
+      background-color: #7bfed2;
+      border-radius: 10px;
+      color: rgb(0, 0, 0);
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 34px;
+      border: none;
+      /* identical to box height */
+
+      text-align: right;
+    }
+
+    &__buttonCancelation {
+      position: absolute;
+      font-size: medium;
+      top: 50%;
+      left: 8%;
+      border-radius: 10px;
+      padding: 12px;
+      background-color: #7bfed2;
+      color: rgb(0, 0, 0);
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 34px;
+      border: none;
+    }
+
+    &__buttonApproval:hover {
+      border: 0.5px solid rgb(0, 0, 0);
+      cursor: pointer;
+      // transition: all 0.2s ease;
+      // transform: scale(1.05) translate(0, 0);
+      transform-origin: center center;
+      background-color: #51fdc3;
+    }
+
+    &__buttonCancelation:hover {
+      border: 0.2px solid rgb(0, 0, 0);
+      cursor: pointer;
+      // transition: all 0.2s ease;
+      // transform: scale(1.05) translate(0, 0);
+      transform-origin: center center;
+      background-color: #51fdc3;
+    }
+  }
+  .addingWork__deleteJobHide {
+    display: none;
+  }
+}
+
+// ::-webkit-scrollbar {
+//   position: absolute;
+
+//   width: -50px;
+
+//   border-radius: 40px;
+//   // background-color: rgb(255, 255, 255);
+// }
+
+.coversAnEmployer {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

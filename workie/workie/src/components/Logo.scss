@@ -1,0 +1,46 @@
+$primary:linear-gradient(
+    to bottom right,
+    rgba(4, 236, 248, 0.467),
+    rgb(65, 239, 155),
+    rgb(115, 237, 184));
+
+
+
+    .wraps{
+       
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       
+     
+        &__logo {
+            padding: 0;
+            margin:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 120px;
+            border: none;
+            // border-radius: 25%;
+            // background: rgba(34, 241, 141, 0.5);
+            &__ant {
+                
+                
+                width: 43px;
+                height: 43px;
+                color: white;
+                border: solid 2px;
+                  border-color: rgba(47, 43, 43,0.4) ;
+                  padding:10px 10px 10px 10px ;
+                  border-radius: 25%;
+                  background:$primary;
+            }
+        }
+       
+    }
+
+
+

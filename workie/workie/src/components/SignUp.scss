@@ -1,0 +1,29 @@
+.signUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .signUp__p{
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+    }
+    .SignUpLink{
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        color: rgb(84, 201, 162);
+        font-weight: bolder;
+        text-decoration: none;
+    }
+    .SignUpLink:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+

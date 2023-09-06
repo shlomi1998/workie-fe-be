@@ -1,0 +1,295 @@
+.wrapsEditProfile {
+
+
+
+    &__navBar {
+        background-color: rgb(113, 225, 188);
+        height: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__title {
+            margin-right: 20px;
+            color: white;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    }
+
+
+
+
+
+
+    &__newDetails {
+        position: relative;
+        // display: grid;
+        // grid-template-rows: repeat(2, 1fr);
+        // grid-gap: 10px;
+
+
+        &__upload {
+            margin: auto;
+
+
+            width: 150px;
+            height: 140px;
+
+
+            &__img {
+                display: block;
+                position: relative;
+                top: 12px;
+                margin: auto;
+                width: 120px;
+                height: 120px;
+                border-radius: 100%;
+                filter: drop-shadow(8px 8px 10px gray);
+            }
+
+            &__img:hover {
+                border-radius: 50%;
+                filter: drop-shadow(8px 8px 10px gray);
+                border: 1px solid rgb(111, 111, 111);
+                cursor: pointer;
+                transform: scale(1.06);
+                transition: transform ease-in .2s;
+            }
+
+            &__inputFile {
+                position: relative;
+                font-size: large;
+                top: -17%;
+                border: none;
+                outline: none;
+                transform: rotate(0deg);
+                opacity: 0;
+                cursor: pointer;
+                
+            }
+
+            input[type="file"] {
+                border: none;
+                outline: none;
+            }
+
+            .fa-pen {
+                position: relative;
+                top: 0%;
+                color: #000000;
+                font-size: medium;
+                cursor: pointer;
+                pointer-events: none;
+
+
+            }
+
+        }
+
+
+        &__firstName {
+            margin-top: 10px;
+            margin-left: 1.5%;
+            width: 46%;
+            grid-column: span 2;
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height */
+
+            text-align: right;
+
+
+        }
+
+        &__lastName {
+            width: 48%;
+            margin-left: 0.9%;
+
+            grid-column: span 2;
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height */
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+            text-align: right;
+
+        }
+
+        &__cellPhoneNumber {
+            margin-top: 10px;
+            width: 97%;
+            box-sizing: border-box;
+            margin-left: 1.5%;
+            padding: 5px;
+            display: block;
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+
+            font-family: 'Fira Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height */
+
+            text-align: right;
+
+            color: #7B7B7D;
+
+        }
+
+        &__email {
+            width: 97%;
+            display: block;
+            box-sizing: border-box;
+
+            margin-left: 1.5%;
+            margin-top: 10px;
+            padding: 5px;
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+            font-family: 'Fira Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height */
+
+            text-align: right;
+
+            color: #7B7B7D;
+        }
+
+        &__date {
+            width: 97%;
+            display: block;
+            box-sizing: border-box;
+
+            margin-left: 1.5%;
+            margin-top: 10px;
+            padding: 5px;
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+
+            font-family: 'Fira Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height */
+
+            text-align: right;
+
+            color: #7B7B7D;
+        }
+
+        &__gender {
+            display: block;
+            box-sizing: border-box;
+            width: 97%;
+            margin-left: 1.5%;
+            margin-top: 10px;
+            padding: 5px;
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+
+            font-family: 'Fira Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height */
+
+            text-align: right;
+
+            color: #7B7B7D;
+        }
+
+        &__status {
+            display: block;
+            box-sizing: border-box;
+            width: 97%;
+
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+            margin-left: 1.5%;
+            margin-top: 10px;
+            padding: 5px;
+
+            font-family: 'Fira Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height */
+
+            text-align: right;
+
+            color: #7B7B7D;
+        }
+
+        &__buttonSubmit {
+
+            position: relative;
+            top: 15px;
+            display: block;
+            margin: auto;
+            align-self: center;
+            height: 50px;
+            width: 30%;
+            background: #5adca2;
+            border: 1px solid #FFFFFF;
+            border-radius: 36px;
+            font-family: 'Fira Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            cursor: pointer;
+
+
+        }
+
+        &__buttonSubmit:hover {
+            background: #42a87a;
+            cursor: pointer;
+        }
+
+
+        .gender {
+            display: none;
+        }
+
+    }
+}
+
+
+.iconPen {
+    position: relative;
+    top: 20%;
+    margin-top: -30%;
+    margin-left: 67%;
+    display: block;
+}

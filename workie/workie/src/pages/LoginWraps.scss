@@ -1,0 +1,151 @@
+
+.loginWarps1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+.loginWarps{
+  margin-top: -40px;
+    width: 420px;
+    height: 380px;
+    background: rgba(255, 255, 255, 0.66);
+    box-shadow: 6px 0px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 30px;
+
+.loginWarps__titel{
+ 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    color: rgba(0, 99, 54, 1) ;
+}
+
+.loginWarps__paragraph{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    
+    text-align: center;
+    
+    color: #4A5568;
+}
+
+.from{
+    position: relative;
+
+
+.checkEmail{
+    
+    height: 51px;
+    width: 351px;
+    border-radius: 0px;
+    border: none;
+    border-bottom:2px solid rgb(146, 146, 254);
+    border-radius: 0px;
+    margin-left:30px;
+     background: rgba(237, 242, 247, 1);
+    
+}
+
+.checkPassword{
+    margin-top: 15px;
+    margin-left:30px;
+    height: 51px;
+    width: 351px;
+    
+    border: none;
+    border-radius: 0px;
+    border-bottom:2px solid rgb(146, 146, 254);
+    border-radius: 0px;
+    background: rgba(237, 242, 247, 1);
+
+}
+
+.fa-eye{
+   position: absolute;
+   top: 39%;
+   left: 83%;
+   color: rgb(90, 219, 157);
+   font-size: medium;
+   cursor: pointer;
+}
+.fa-eye-slash{
+   position: absolute;
+   top: 39%;
+   left: 83%;
+   color: rgb(90, 219, 157);
+   font-size: medium;
+   cursor: pointer;
+}
+
+.fa-eye-slash:hover{
+    color: rgb(72, 179, 127);
+}
+.fa-eye:hover{
+    color: rgb(74, 179, 128);
+}
+
+
+
+
+
+
+
+.login__Button{
+    margin-top: 65px;
+    position: relative;
+    left:15%;
+    height: 40px;
+    width: 280px;
+    border:1px solid #4A5568;
+    border-radius: 36px;
+    background: rgb(90, 219, 157);
+    border-radius: 36px;
+  
+
+
+}
+
+.login__Button:hover{
+    background: #48b681;
+    cursor: pointer;
+}
+
+}
+.forgotPassword{
+    position: relative;
+    top:4%;
+    left: 35%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #4A5568;
+       
+}
+.forgotPassword:hover{
+    text-decoration: underline;
+    cursor: pointer;
+   
+}
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

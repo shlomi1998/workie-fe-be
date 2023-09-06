@@ -1,0 +1,196 @@
+.navBarAddJob {
+    position: sticky;
+    right: 10px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    align-items: center;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    font-weight: 500;
+    font-style: normal;
+    font-weight: 500;
+    background: rgb(109, 218, 181);
+    color: white;
+
+    &__Titel {
+        padding-right: 15px;
+    }
+
+
+
+}
+
+
+
+.wrapsAddJob {
+    &__from {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__label {
+            margin: 10px 0px 10px 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #000000;
+        }
+
+        &__jobType {
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Fira Sans';
+            box-sizing: border-box;
+            height: 40px;
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+        }
+
+        &__date {
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Fira Sans';
+            height: 40px;
+
+
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+        }
+
+        &__workHours {
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Fira Sans';
+            height: 40px;
+
+
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+        }
+
+        &__exactLocation {
+
+            height: 40px;
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Fira Sans';
+
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+        }
+
+        &__HourlyWage {
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Fira Sans';
+            height: 40px;
+
+
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+        }
+
+        &__AgeRestriction {
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Fira Sans';
+            height: 40px;
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+
+        }
+
+        &__jobDescription {
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Fira Sans';
+
+            width: 80%;
+            margin-top: 20px;
+            overflow-y: scroll;
+            height: 110px;
+            background: #FFFFFF;
+            border: 1px solid #52CE92;
+            border-radius: 10px;
+        }
+
+        &__submit {
+            margin-top: 20px;
+            font-family: 'Fira Code';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            padding: 15px 25px 15px 25px;
+            // padding-left: 25px;
+            // padding-right: 25px;
+
+            line-height: 26px;
+            text-align: center;
+            color: #6dfba3;
+            background: #202C4A;
+            border-radius: 36px;
+
+            .icon {
+                position: relative;
+                right: -8px;
+                color: #FFFFFF;
+                font-size: 25px;
+
+            }
+        }
+
+        &__submit:hover {
+            color: #6dfba3;
+            background: #0f1f43;
+            cursor: pointer;
+            font-size: 30.5px;
+        }
+
+    }
+
+
+    &__from>input {
+        margin: 10px;
+        width: 80%;
+    }
+
+
+
+}
+
+
+
+
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

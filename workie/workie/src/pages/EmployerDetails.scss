@@ -1,0 +1,110 @@
+.EmployerProfile {
+  position: relative;
+  font-size: x-large;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  &__iconWhatsapp {
+    position: absolute;
+    left: 15%;
+    top: 13vh;
+    color: #00d48d;
+
+    font-size: 60px;
+  }
+  &__iconWhatsapp:hover {
+    position: absolute;
+    left: 15%;
+    top: 13vh;
+    color: #01b579;
+    cursor: pointer;
+    font-size: 60px;
+  }
+
+  .EmployerProfile__report {
+    background-color: #5ce3b6;
+    position: absolute;
+    padding-top: 2.5%;
+    border: 3px solid #202c4a;
+    width: 350px;
+    height: 160px;
+    color: #000000;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    margin: auto;
+    // box-shadow: 0px 0px 30px 10px #a0a0a0;
+    text-align: center;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__title {
+      margin-bottom:80px;
+      font-size: x-large;
+    }
+    &__buttonApproval {
+      position: absolute;
+      font-size: medium;
+      top: 50%;
+      right: 8%;
+      padding: 12px;
+      padding-left: 12px;
+      background-color: #7bfed2;
+      border-radius: 10px;
+      color: rgb(0, 0, 0);
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 34px;
+      border: none;
+      /* identical to box height */
+
+      text-align: right;
+    }
+
+    &__buttonCancelation {
+      position: absolute;
+      font-size: medium;
+      top: 50%;
+      left: 8%;
+      border-radius: 10px;
+      padding: 12px;
+      background-color: #7bfed2;
+      color: rgb(0, 0, 0);
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 34px;
+      border: none;
+    }
+
+    .EmployerProfile__report__buttonApproval:hover {
+      border: 0.5px solid rgb(0, 0, 0);
+      cursor: pointer;
+      // transition: all 0.2s ease;
+      // transform: scale(1.05) translate(0, 0);
+      transform-origin: center center;
+      background-color: #51fdc3;
+    }
+
+    .EmployerProfile__report__buttonCancelation:hover {
+      border: 0.2px solid rgb(0, 0, 0);
+      cursor: pointer;
+      // transition: all 0.2s ease;
+      // transform: scale(1.05) translate(0, 0);
+      transform-origin: center center;
+      background-color: #51fdc3;
+    }
+  }
+  .EmployerProfile__reportHide{
+    display: none;
+  }
+
+}
+
+

@@ -1,0 +1,121 @@
+.wraps_Information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    .wraps__Information__child{
+        background: rgba(255, 255, 255, 0.66);
+        box-shadow: 6px 10px 12px 10px rgba(0, 0, 0, 0.12);
+        border-radius: 30px;
+      position: relative;
+      top: -60px;
+      width: 80%;
+      height: 78vh;
+      max-width: 600px;
+    }
+    .Welcome{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        color: rgba(0, 99, 54, 1) ;
+        margin-top: 20px;
+        
+    }
+ 
+    .Welcome__p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        margin-top: -10px;
+        
+        text-align: center;
+        
+        color: #4A5568;
+        margin-bottom: 40px;
+    }
+    input{
+        padding-left: 2%;
+        margin-top: 45px; 
+        display: block;
+        width: 88%;
+        height: 51px;
+        color: #000000;
+        font-weight: 800;
+        border-radius: 0px;
+        border: none;
+        border-bottom:2px solid rgb(146, 146, 254);
+        border-radius: 0px;
+        margin-left:30px;
+        margin-right:30px;
+         background: rgba(237, 242, 247, 1);
+    }
+ 
+    select{
+        padding-left: 2%;
+        margin-top: 15px; 
+        display: block;
+        width: 90%;
+        height: 51px;
+        color: #363636;
+        font-weight: 800;
+        border-radius: 0px;
+        border: none;
+        border-bottom:2px solid rgb(146, 146, 254);
+        border-radius: 0px;
+        margin-left:30px;
+        margin-right:30px;
+         background: rgba(237, 242, 247, 1);
+        option{
+            color: #000000;
+            font-weight: 800;
+            margin-top: 15px; 
+            display: block;
+            width: 85%;
+            height: 51px;
+            
+            border-radius: 0px;
+            border: none;
+            border-bottom:2px solid rgb(146, 146, 254);
+            border-radius: 0px;
+            margin-left:30px;
+            margin-right:30px;
+             background: rgba(237, 242, 247, 1);
+        }
+        .gender{
+            display: none;
+        }
+    }
+  
+    .addingProfile{
+        margin-top: 55px;
+        height: 40px;
+        width: 280px;
+        border:1px solid #4A5568;
+        border-radius: 36px;
+        background: rgb(90, 219, 157);
+        border-radius: 36px;
+        color: white;
+        font-family: 'Roboto';
+        font-size: larger;
+        font-weight: 400;
+    }
+
+
+
+
+   
+    
+    .addingProfile:hover{
+        background: #48b681;
+        cursor: pointer;
+    }
+}
+
+input{
+    color: #000000;
+    font-weight: 800;
+}

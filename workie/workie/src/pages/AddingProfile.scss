@@ -1,0 +1,139 @@
+.wrapsProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;  
+   &__{
+    background: rgba(255, 255, 255, 0.66);
+    box-shadow: 6px 10px 12px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 30px;
+    position: relative;
+    top: -60px;
+    width: 80%;
+    height: 78vh;
+    max-width: 600px;
+    .wrapsProfile__JustLittle{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        color: rgba(0, 99, 54, 1) ;
+        margin-top: 20px;
+        
+    }
+
+
+    .ProfileStatus{
+      overflow-y: auto;
+      padding-left: 3%;
+      width:70% ;
+      border-radius: 0px;
+      border: none;
+      border-bottom:2px solid rgb(146, 146, 254);
+      border-radius: 5px;
+      margin-left:30px;
+      background: rgb(228, 241, 254); 
+    }
+  
+    .AddAprofilePicture{
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      color: #4A5568;
+      margin-bottom: 40px;
+    }
+
+    .WrapsProfilePicture{
+      margin-left:25% ;
+      align-items: center;
+      width: 50%;
+      height: 24vh;
+      
+      
+
+      .profilePicture{
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+        filter: drop-shadow(8px 8px 10px gray);
+        
+    }
+    .profilePicture:hover{
+        border-radius: 50%;
+        filter: drop-shadow(8px 8px 10px gray);
+        border: 1px solid rgb(111, 111, 111);
+        cursor: pointer;
+        transform: scale(1.06);
+        transition: transform ease-in .2s ;
+        
+    }
+
+
+
+
+      .inputFile{
+        position: relative;
+        font-size: x-large;
+        top: -26%;
+        left: 28%;
+        
+        border: none;
+        outline: none;
+        transform: rotate(0deg);
+        opacity:0;
+      }
+      // .inputFile:hover{
+        
+      // }
+
+      input[type="file"] {
+        border: none;
+        outline: none;
+      }
+      .fa-pen{
+        position: relative;
+        top: -38%;
+        left: 10%;
+        color: #000000;
+        font-size: medium;
+        cursor: pointer; 
+        pointer-events: none;
+      }
+    }
+
+
+   
+    
+    .letsStart__button{
+      margin-top: 35px;
+      margin-bottom:20px;
+      height: 40px;
+      width: 280px;
+      border:1px solid #4A5568;
+      border-radius: 36px;
+      background: rgb(90, 219, 157);
+      border-radius: 36px;
+      color: white;
+      font-family: 'Roboto';
+      font-size: larger;
+      font-weight: 400;
+    }
+    .letsStart__button:hover{
+        background: #48b681;
+        cursor: pointer;
+    }  
+  
+  
+  }
+   }
+
+   textarea {
+    resize: none;
+    color: #000000;
+    font-weight: 800;
+    
+    
+  }

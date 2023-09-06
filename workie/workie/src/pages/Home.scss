@@ -1,0 +1,20 @@
+body{
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.wraps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    &__homeImg{
+        text-align: center;
+        width: 450px;
+        filter: opacity(0.8);
+        // box-shadow: 0px 5px 20px 2px black;
+        
+        
+    }
+}
+

@@ -1,0 +1,28 @@
+
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__Button{
+    color: white;
+    width: 273px;
+    height: 56px;
+    background: #5ae4a1;
+    border-radius: 36px;
+   
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 31px;
+        text-align: center;
+        color: #FFFFFF;
+}
+
+.login__Button:hover{
+    background: #46b27e;
+    cursor: pointer;
+}
