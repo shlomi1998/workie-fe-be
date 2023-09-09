@@ -54,9 +54,10 @@ export default function Contact({ contact, setSearchResults }: ContactProps) {
   // console.log(values.receiver_id)
   // console.log(values)
 
-  const openConversation = () => {
+  const openConversation = async() => {
     console.log(values)
-    dispatch(open_create_conversation(values));
+    await dispatch(open_create_conversation(values));
+    setSearchResults([])
   };
 
   return (

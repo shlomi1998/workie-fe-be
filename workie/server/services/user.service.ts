@@ -9,7 +9,8 @@ export const findUser = async (userId:any) => {
 };
 
 export const searchUsers = async (keyword: string,userId:any) => {
-  const users = await UserModel.find({
+  console.log("keyword:",keyword,"userId:",userId)
+  const users:any = await UserModel.find({
     $or: [
       { name: { $regex: keyword, $options: "i" } },
       { email: { $regex: keyword, $options: "i" } },

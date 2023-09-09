@@ -27,6 +27,7 @@ export default function Sidebar() {
           <SearchResults
             searchResults={searchResults}
             setSearchResults={setSearchResults}
+            
           />
         </>
       ) : (

@@ -163,6 +163,9 @@
   display: flex;
   flex-direction: column-reverse;
 }
+.epr-emoji-category{
+  width: 80vw;
+}
 .openToolsAnimation {
   animation: openTools 0.2s forwards;
 }

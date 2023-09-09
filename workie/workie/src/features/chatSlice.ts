@@ -72,7 +72,7 @@ export const getConversationMessages = createAsyncThunk(
     }
   }
 );
-export const sendMessage:any = createAsyncThunk(
+export const sendMessage: any = createAsyncThunk(
   "message/sand",
   async (values: any, { rejectWithValue }) => {
     const { token, message, convo_id, files }: any = values;
@@ -146,7 +146,16 @@ export const chatSlice = createSlice({
       })
       .addCase(sendMessage.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.messages = [...state.messages,action.payload];
+        state.messages = [...state.messages, action.payload];
+        let conversation = {
+          ...action.payload.conversation,
+          latestMessage: action.payload,
+        };
+        let newConvos = [...state.conversations].filter(
+          (c: any) => c._id !== conversation._id
+        );
+        newConvos.unshift(conversation)
+        state.conversations=newConvos
       })
       .addCase(sendMessage.rejected, (state: any, action) => {
         state.status = "failed";

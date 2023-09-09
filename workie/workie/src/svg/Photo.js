@@ -2,8 +2,8 @@ export default function PhotoIcon() {
   return (
     <svg
       viewBox="0 0 53 53"
-      height={53}
-      width={53}
+      height={43}
+      width={43}
       preserveAspectRatio="xMidYMid meet"
       className=""
       x="0px"

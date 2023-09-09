@@ -3,14 +3,15 @@ import React from "react";
 interface InputProps {
   message: string;
   setMessage: React.Dispatch<React.SetStateAction<string>>;
+  textRef:any
 }
 
-const Input: React.FC<InputProps> = ({ message, setMessage }) => {
+const Input: React.FC<InputProps> = ({ message, setMessage,textRef }) => {
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(e.target.value);
   };
 
-  console.log("message", message);
+  // console.log("message", message);
 
   return (
     <div className="w-full">
@@ -20,6 +21,7 @@ const Input: React.FC<InputProps> = ({ message, setMessage }) => {
         placeholder="Type a message"
         value={message}
         onChange={onChangeHandler}
+        ref={textRef}
       />
     </div>
   );

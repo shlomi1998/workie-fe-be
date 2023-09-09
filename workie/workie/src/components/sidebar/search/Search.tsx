@@ -32,7 +32,8 @@ export default function Search({ searchLength, setSearchResults }: SearchProps) 
           }
         );
         setSearchResults(data);
-        console.log(searchLength)
+        console.log(data)
+        
       } catch (error: any) {
         console.log(error);
         console.log(error.response?.data?.error?.message);
