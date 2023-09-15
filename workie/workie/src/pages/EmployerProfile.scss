@@ -57,6 +57,7 @@
       border: 1px solid black;
       border-radius: 100%;
       width: 90px;
+      height:90px;
     }
     &__companyName {
       font-size: x-large;
@@ -118,8 +119,7 @@
     cursor: pointer;
   }
   &__jobDescriptionC {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     font-size: large;
     width: 45%;
     height: 50px;
@@ -132,6 +132,7 @@
   }
 
   &__jobDetails {
+   
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
     font-size: large;
@@ -160,6 +161,7 @@
   }
 
   &__JobDetailsForRegistration {
+ 
     background-color: rgb(255, 255, 255);
     width: 100%;
     margin-left: 0%;

@@ -29,7 +29,7 @@ export const sendMessage = async (req: any, res: any, next: any) => {
 export const getMessages = async (req: any, res: any, next: any) => {
   try {
     const convo_id = req.params.convo_id;
-    console.log(convo_id)
+    // console.log(convo_id)
     if(!convo_id){
         logger.error("Please add a conversation id in params.");
         res.sendStatus(400);

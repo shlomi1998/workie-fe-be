@@ -14,7 +14,7 @@
     height: 78vh;
     max-width: 600px;
     .wrapsProfile__JustLittle{
-        font-family: 'Roboto';
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 36px;
@@ -37,7 +37,7 @@
     }
   
     .AddAprofilePicture{
-      font-family: 'Roboto';
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
@@ -108,7 +108,7 @@
    
     
     .letsStart__button{
-      margin-top: 35px;
+      margin-top: 10px;
       margin-bottom:20px;
       height: 40px;
       width: 280px;
@@ -117,7 +117,7 @@
       background: rgb(90, 219, 157);
       border-radius: 36px;
       color: white;
-      font-family: 'Roboto';
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: larger;
       font-weight: 400;
     }
@@ -134,6 +134,7 @@
     resize: none;
     color: #000000;
     font-weight: 800;
+    font-size:17px;
     
     
   }

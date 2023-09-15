@@ -73,7 +73,7 @@ const ServiceProvider = () => {
                 <span className="fa-solid fa-location-dot iconLocation "></span>
               </p>
               <p className="all-Jobs__wrapper__rating__services">
-                {3.5} <span className="fa-solid fa-star iconStar "></span>
+                {0} <span className="fa-solid fa-star iconStar "></span>
               </p>
 
               {/* <p className="addingWork__myWork__div__location">

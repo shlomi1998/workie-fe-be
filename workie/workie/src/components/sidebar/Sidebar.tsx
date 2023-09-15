@@ -11,7 +11,7 @@ export default function Sidebar() {
   // console.log(searchResults);
 
   return (
-    <div className="flex0030 max-w-[30%] h-full select-none ">
+    <div className="flex0030 max-w-[30%] h-full select-none sticky left-0 ">
       {/*Sidebar Header*/}
       <SidebarHeader />
       {/*Notifications */}

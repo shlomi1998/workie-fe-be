@@ -27,7 +27,7 @@ const NavBarServiceScreen = () => {
     <i className="fa-regular fa-comments messageIcon"></i>
 
     <div onClick={handleEmployeeEmployerChange} className={"employeeEmployer"}>
-    looking service
+    provider
       <br></br>
       <i
         onClick={handleEmployeeEmployerChange}
@@ -39,7 +39,7 @@ const NavBarServiceScreen = () => {
 
     <div  className={
           checkEmployerEmployee
-            ? "employeeEmployerW"
+            ? "employeeEmployerW "
             : "ShowEmployeeEmployerW"
         }>
       <span
@@ -50,7 +50,7 @@ const NavBarServiceScreen = () => {
             : "ShowEmployeeEmployee"
         }
       >
-        looking service
+        provider
       </span>
       <span
       onClick={NavEmployerPage}
@@ -60,7 +60,7 @@ const NavBarServiceScreen = () => {
             : "ShowEmployeeEmployer"
         }
       >
-        service provider
+        customer
       </span>
     </div>
 

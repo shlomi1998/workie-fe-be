@@ -27,7 +27,7 @@ const TopNavbarService = () => {
       onClick={handleEmployeeEmployerChange}
       className={"employeeEmployer"}
     >
-      service provider
+       provider
       <br></br>
       <i
         onClick={handleEmployeeEmployerChange}
@@ -48,7 +48,7 @@ const TopNavbarService = () => {
             : "ShowEmployeeEmployer"
         }
       >
-        service provider
+        provider
       </span>
       <span
         onClick={NavEmployerPage}
@@ -58,7 +58,7 @@ const TopNavbarService = () => {
             : "ShowEmployeeEmployee"
         }
       >
-       looking service
+       customer
       </span>
     </div>
   </div>

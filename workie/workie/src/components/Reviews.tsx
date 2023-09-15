@@ -4,7 +4,6 @@ import "./Reviews.scss"
 const Reviews = () => {
   return (
     <div>
-      nbjghjghg
     </div>
   )
 }

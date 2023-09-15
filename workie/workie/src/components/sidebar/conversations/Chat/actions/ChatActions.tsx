@@ -7,9 +7,19 @@ import { sendMessage } from "../../../../../features/chatSlice";
 import { setMaxIdleHTTPParsers } from "http";
 import { ClipLoader } from "react-spinners";
 import EmojiPickerApp from "./EmojiPicker";
+import SocketContext from "../../../../../context/SocketContext";
 
-const ChatActions: React.FC = () => {
+interface ChatActionsProps {
+  socket: any;
+}
+
+const ChatActions: React.FC<ChatActionsProps> = ({ socket }) => {
   const dispatch = useDispatch();
+  const [showEmojis, setShowEmojis] = useState(false);
+  const [showPicker, setShowPicker] = useState(false);
+  const [showAttachments, setShowAttachments] = useState(false);
+  
+  const [loading,setLoading]=useState(false)
   const { activeConversation, status } = useSelector(
     (state: any) => state.chat
   );
@@ -25,26 +35,36 @@ const ChatActions: React.FC = () => {
     token,
   };
 
-  const sendMessageHandler = async (event: React.FormEvent) => {
+  const sendMessageHandler = async (event:any) => {
     event.preventDefault();
-    await dispatch(sendMessage(values));
-
+    setLoading(true)
+    let newMsg=await dispatch(sendMessage(values));
+    console.log("newMsg",)
+    socket.emit("send message",newMsg.payload)
     setMessage("");
+    setLoading(false)
   };
 
   return (
     <form
-      onSubmit={sendMessageHandler}
+      onSubmit={(e: any) => sendMessageHandler(e)}
       className="dark:bg-dark_bg_2 h-[60px] w-full flex items-center absolute bottom-0 px-4 py-2 select-none"
     >
-      <div className="w-full flex items-center gap-x-2 ">
+      <div className="w-[60vw] flex items-center gap-x-2 ">
         <ul className="list-none flex">
           <EmojiPickerApp
             message={message}
             setMessage={setMessage}
             textRef={textRef}
+            showPicker={showPicker}
+            setShowPicker={setShowPicker}
+            setShowAttachments={setShowAttachments}
           />
-          <Attachments />
+          <Attachments
+            setShowPicker={setShowPicker}
+            showAttachments={showAttachments}
+            setShowAttachments={setShowAttachments}
+          />
         </ul>
         <Input message={message} setMessage={setMessage} textRef={textRef} />
         <button type="submit" className="btn dark:bg-dark_bg_2 border-0">
@@ -59,4 +79,9 @@ const ChatActions: React.FC = () => {
   );
 };
 
-export default ChatActions;
+const ChatActionsWithSocket = (props: any) => (
+  <SocketContext.Consumer>
+    {(socket: any) => <ChatActions {...props} socket={socket} />}
+  </SocketContext.Consumer>
+);
+export default ChatActionsWithSocket;

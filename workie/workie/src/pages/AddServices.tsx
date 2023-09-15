@@ -49,7 +49,7 @@ const AddServices = () => {
     <div className="wrapsAddJob">
       <form onSubmit={handleSubmit} className="wrapsAddJob__from">
         <label className="wrapsAddJob__from__label">
-          The details of the shift{" "}
+        Service details {" "}
         </label>
         <input
           required
@@ -114,7 +114,7 @@ const AddServices = () => {
           onChange={handleChange}
         />
         <button className="wrapsAddJob__from__submit" type="submit">
-          Post a service <i className="fa-solid fa-arrow-left icon"></i>
+          Publish Service <i className="fa-solid fa-arrow-left icon"></i>
         </button>
       </form>
     </div>

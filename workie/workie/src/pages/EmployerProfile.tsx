@@ -11,11 +11,10 @@ import { reverse } from "dns";
 import { userInfo } from "os";
 import { JobDescription } from "../components/index";
 
-
 const EmployerProfile = () => {
   const navigate = useNavigate();
   const userContext = useContext(AppContext);
-  const [userId, setUserId] = useState('');
+  const [userId, setUserId] = useState("");
   const [imageSrc, setImageSrc] = useState("./images/ProfileImg.jpg");
   const [selectedButton, setSelectedButton] = useState(null);
   const [isTrue, setIsTrue]: any = useState(false);
@@ -83,9 +82,9 @@ const EmployerProfile = () => {
     };
     getJob();
 
-    if (userContext?.employerDetails=="") {
-      navigate('/MainScreen');
-   }
+    if (userContext?.employerDetails == "") {
+      navigate("/MainScreen");
+    }
   }, []);
 
   console.log(userContext?.jobType, userContext?.employerDetails);
@@ -120,36 +119,40 @@ const EmployerProfile = () => {
     }
   };
 
-  const handleRegistration=async()=>{
-   setJobRegistration(!jobRegistration);
-  //  try {
-  //   const response = await axios.post(`/addUserId/${userId}`);
-  //   setMessage(response.data.message);
-  // } catch (error) {
-  //   console.error(error);
-  //   setMessage('An error occurred');
-  // }
-  }
-  const CancellationOfRegistration =async()=>{
-   setJobRegistration(!jobRegistration);
-  }
-  const registrationConfirmation=async()=>{
+  const handleRegistration = async () => {
+    setJobRegistration(!jobRegistration);
+    //  try {
+    //   const response = await axios.post(`/addUserId/${userId}`);
+    //   setMessage(response.data.message);
+    // } catch (error) {
+    //   console.error(error);
+    //   setMessage('An error occurred');
+    // }
+  };
+  const CancellationOfRegistration = async () => {
+    setJobRegistration(!jobRegistration);
+  };
+  const registrationConfirmation = async () => {
     //אם הוא אישר זה ישלח בקשה לרישום כאן חוסיף למערך את ה id שלן
-    console.log(`/api/v1/jobs/addRegisteredUser/${userContext?.jobType}/${userContext?.employerDetails}`)
+    console.log(
+      `/api/v1/jobs/addRegisteredUser/${userContext?.jobType}/${userContext?.employerDetails}`
+    );
     try {
-      const response = await axios.post(`/api/v1/jobs/addRegisteredUser/${userContext?.jobType}/${userContext?.employerDetails}`);
+      const response = await axios.post(
+        `/api/v1/jobs/addRegisteredUser/${userContext?.jobType}/${userContext?.employerDetails}`
+      );
 
-      console.log(response.data)
+      console.log(response.data);
     } catch (error) {
       console.error(error);
-      
     }
     // console.log(userContext?.employerDetails)
     setJobRegistration(!jobRegistration);
-  }
+  };
 
-
-
+  const goToTheChatScreen = () => {
+    navigate("/ChatScreen");
+  };
 
   return (
     <div className="EmployerProfile">
@@ -160,7 +163,10 @@ const EmployerProfile = () => {
           onClick={handleClick}
         />
         {/* <TbMessageCircle2 className=" EmployerProfile__nav__sendMessage" /> */}
-        <i className="fa-regular fa-comments EmployerProfile__nav__message"></i>
+        <i
+          onClick={goToTheChatScreen}
+          className="fa-regular fa-comments EmployerProfile__nav__message"
+        ></i>
       </nav>
 
       <div className="EmployerProfile__details">
@@ -251,7 +257,10 @@ const EmployerProfile = () => {
         </div>
       )}
 
-      <button onClick={handleRegistration} className="EmployerProfile__forRegistrationButton">
+      <button
+        onClick={handleRegistration}
+        className="EmployerProfile__forRegistrationButton"
+      >
         for registration <i className="fa-solid fa-arrow-left icon"></i>
       </button>
 
@@ -283,12 +292,13 @@ const EmployerProfile = () => {
         ""
       )}
 
-
-      {/* //------------------------------------------------------------------------ */ }
+      {/* //------------------------------------------------------------------------ */}
       {jobRegistration ? (
         <div
           className={
-            jobRegistration ? "EmployerProfile__report" : "EmployerProfile__reportHide"
+            jobRegistration
+              ? "EmployerProfile__report"
+              : "EmployerProfile__reportHide"
           }
         >
           <span className="EmployerProfile__report__title">

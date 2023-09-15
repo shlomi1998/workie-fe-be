@@ -3,6 +3,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { open_create_conversation } from "../../../features/chatSlice";
+import SocketContext from "../../../context/SocketContext";
 
 type ContactProps = {
   contact: {
@@ -12,10 +13,11 @@ type ContactProps = {
     lastName: string;
     status: string;
   };
+  socket:any
   setSearchResults: (results: any[]) => any;
 };
 
-export default function Contact({ contact, setSearchResults }: ContactProps) {
+ function Contact({ contact, setSearchResults , socket}: ContactProps) {
   // const getToken = async (e: any) => {
   //   try {
   //     const response = await axios.get("/api/v1/auth/getToken");
@@ -55,10 +57,10 @@ export default function Contact({ contact, setSearchResults }: ContactProps) {
   // console.log(values)
 
   const openConversation = async() => {
-    console.log(values)
-    await dispatch(open_create_conversation(values));
-    setSearchResults([])
+    let newConvo = await dispatch(open_create_conversation(values));
+    socket.emit("join conversation", newConvo.payload._id);
   };
+
 
   return (
     <li
@@ -101,10 +103,10 @@ export default function Contact({ contact, setSearchResults }: ContactProps) {
 }
 // ... (rest of the code)
 
-// const ContactWithContext = (props) => (
-//   <SocketContext.Consumer>
-//     {(socket) => <Contact {...props} socket={socket} />}
-//   </SocketContext.Consumer>
-// );
+const ContactWithContext = (props:any) => (
+  <SocketContext.Consumer>
+    {(socket:any) => <Contact {...props} socket={socket} />}
+  </SocketContext.Consumer>
+);
 
-// export default ContactWithContext;
+export default ContactWithContext;

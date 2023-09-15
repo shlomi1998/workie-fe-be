@@ -1,13 +1,15 @@
+import mongoose from "mongoose";
+import { Server } from "socket.io";
 import cors from "cors";
 import express from "express";
 const app = express();
 import dotenv from "dotenv";
 dotenv.config();
-import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import path from "path";
 import bodyParser from "body-parser";
 import multer from "multer";
+
 // import morgan from "morgan";
 // import helmet from "helmet";
 // import mongoSanitize from "express-mongo-sanitize";
@@ -17,17 +19,19 @@ import multer from "multer";
 // hello
 // db and authenticateUser
 import connectDB from "./db/connect";
-
+import SocketServer from "./SocketServer";
 // routers
 import authRouter from "./routes/authRoutes";
 import jobsRouter from "./routes/jobsRoutes";
 import servicesRouter from "./routes/servicesRoutes";
-import ConversationRoutes from './routes/conversation.route'
-import MessageRoutes from './routes/message.route'
-import userRoutes from './routes/user.route'
+import ConversationRoutes from "./routes/conversation.route";
+import MessageRoutes from "./routes/message.route";
+import userRoutes from "./routes/user.route";
 
 import { ConversationModel, UserModel } from "./models";
 import MessageModel from "./models/MessageModel";
+import logger from "./configs/logger.config";
+// import { Server } from "http";
 
 //  import a from './build/images'
 
@@ -62,9 +66,9 @@ app.use(cookieParser());
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", jobsRouter);
 app.use("/api/v1/services", servicesRouter);
-app.use("/api/v1/conversation",ConversationRoutes);
-app.use("/api/v1/message",MessageRoutes);
-app.use("/api/v1/user",userRoutes);
+app.use("/api/v1/conversation", ConversationRoutes);
+app.use("/api/v1/message", MessageRoutes);
+app.use("/api/v1/user", userRoutes);
 
 // Storage Engin That Tells/Configures Multer for where (destination) and how (filename) to save/upload our files
 const fileStorageEngine = multer.diskStorage({
@@ -93,23 +97,38 @@ app.post("/single", upload.single("image"), (req: any, res: any) => {
   }
 });
 
-
-
 const port = process.env.PORT || 5000;
 
 const start = async () => {
   try {
     await connectDB(process.env.MONGODB_URI);
-    app.listen(port, () => {
+
+   const server = app.listen(port, () => {
+
       console.log(`Server is listening on port ${port}...`);
+      const io = new Server(server, {
+        pingTimeout: 60000,
+        cors: {
+          origin:"*",
+        },
+      });
+
+      
+      io.on("connection", (socket: any) => {
+        console.log("Socket io connected successfully :-)");
+        SocketServer(socket, io);
+        // socket.on('sendMessage',(msg:any)=>{
+        //   io.emit('receiveMessage',msg)
+        // })
+      });
+
+    
     });
   } catch (error) {
     console.log(error);
   }
 };
 
+
+
 start();
-
-
-
-

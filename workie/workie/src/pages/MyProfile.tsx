@@ -83,7 +83,7 @@ const MyProfile = () => {
       <p className="WrapsProfilePage__MyName">{user.firstName} {" "} {user.lastName}</p>
       <p className="WrapsProfilePage__MyPhoneNumber">{user.cellphoneNumber}</p>
       <p className="WrapsProfilePage__MyEmail">{user.email}</p>
-      <p className="WrapsProfilePage__WhoAmI">Who Am I</p>
+      <p className="WrapsProfilePage__WhoAmI">Bio</p>
 
       <div className="WrapsProfilePage__status">
         <p className="WrapsProfilePage__status__P">

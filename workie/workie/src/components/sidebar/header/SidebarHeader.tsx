@@ -61,7 +61,7 @@ export default function SidebarHeader() {
   getUser();
 
   return (
-    <div className="h-[50px] dark:bg-dark_bg_2 flex items-center p16">
+    <div className="h-[50px] dark:bg-dark_bg_2 flex items-center p16 sticky top-[7px]">
       <div className="w-full flex items-center justify-between">
         <button className="btn ">
           <img
@@ -74,7 +74,7 @@ export default function SidebarHeader() {
             alt={`${user.firstName} ${" "} ${user.lastName}`}
           />
         </button>
-        <ul className="flex items-center gap-x-2 5 list-none">
+        <ul className="flex items-center gap-x-2 5 list-none relative left-5">
           <li>
             <button className="dark:bg-dark_bg_2 border-0 btn">
               <CommunityIcon className={"dark:fill-dark_svg_1"} />

@@ -189,7 +189,7 @@ function Enrollment() {
 
       <div className="wraps">
         <div className="RegistrationEnvelope">
-          <h1 className="enrollment">enrollment</h1>
+          <h1 className="enrollment">registration</h1>
           <p className="enrollment_p">
             Register so that we can find <br /> a job for you soon{" "}
           </p>

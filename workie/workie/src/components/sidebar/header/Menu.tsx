@@ -26,7 +26,7 @@ export default function Menu() {
 }
 
   return (
-    <div className="absolute right-1 z-50 dark:bg-dark_bg_2 dark:text-dark_text_1 shadow-md w-52">
+    <div className="absolute -right-4 z-1 dark:bg-dark_bg_2 dark:text-dark_text_1 shadow-md w- z-50">
       <ul className="relative left-[-40px] list-none w-52">
         <li className="flex items-center hover:bg-dark_bg_3 py-3 pl-5 cursor-pointer">
           <span className="font-sans flex-grow">New group</span>
@@ -34,9 +34,9 @@ export default function Menu() {
         <li className="flex items-center hover:bg-dark_bg_3 py-3 pl-5 cursor-pointer">
           <span className="font-sans flex-grow">New community</span>
         </li>
-        <li className="flex items-center hover:bg-dark_bg_3 py-3 pl-5 cursor-pointer">
+        {/* <li className="flex items-center hover:bg-dark_bg_3 py-3 pl-5 cursor-pointer">
           <span className="font-sans flex-grow">Settings</span>
-        </li>
+        </li> */}
         <li
           onClick={removeToken}
           className="flex items-center hover:bg-dark_bg_3 py-3 pl-5 cursor-pointer"

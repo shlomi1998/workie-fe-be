@@ -54,6 +54,7 @@
     "nodemailer": "^6.9.3",
     "normalize.css": "^8.0.1",
     "path": "^0.12.7",
+    "socket.io": "^4.7.2",
     "styled-components": "^5.3.10",
     "trim-request": "^1.0.6",
     "validator": "^13.7.0",

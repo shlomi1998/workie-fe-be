@@ -26,14 +26,14 @@ const Message: React.FC<MessageProps> = ({ message ,me}) => {
     >
       <div>
         <div
-          className={`relative h-full dark:text-dark_text_1 p-1 rounded-lg
+          className={`relative h-full dark:text-dark_text_1 rounded-lg
         ${me ? "bg-green_3 " : "dark:bg-dark_bg_2"}
         `}
         >
-          <p className="float-left h-fll  text-sm pl-2 pr-2 pb-2">
+          <p className="text-right mb-2 h-fll  text-sm pl-2 pr-2 pt-2 ">
             {message.message}
           </p>
-          <span className="float-right relative top-3 right-1 text-xs pt-6 text-dark_text_2">
+          <span className="text-xs text-dark_text_2 absolute bottom-1 right-2">
             {moment(message.createdAt).format("HH:mm")}
           </span>
           <span>

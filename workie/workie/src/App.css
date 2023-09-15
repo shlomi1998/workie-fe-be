@@ -1,12 +1,13 @@
 
 @tailwind components;
 @tailwind utilities;
+ 
 
 
 @layer components {
   .container {
     width: calc(100% - 38px);
-    max-width: 1600px;
+    max-width: 1800px;
   }
   .flex0030 {
     flex: 0 0 30%;
@@ -102,7 +103,7 @@
 }
 /*---Emoji picker*/
 .epr-dark-theme {
-  background: #202c33 !important;
+  background: #fff !important;
   border-radius: 0 !important;
   border: none !important;
 }
@@ -119,7 +120,7 @@
   }
 }
 .epr-search-container input {
-  background: #222e35 !important;
+  background: #dee3e3 !important;
   border-radius: 0 !important;
   border: none !important;
   font-size: 13px;
@@ -144,9 +145,9 @@
 }
 
 /* Handle */
-.epr-body::-webkit-scrollbar-thumb {
-  background: #444e54 !important;
-}
+/* .epr-body::-webkit-scrollbar-thumb {
+  background:  !important;
+} */
 .epr-category-nav {
   padding: 10px 0 !important;
 }
@@ -154,7 +155,7 @@
   content: "";
   width: 140px;
   height: 4px;
-  background: #00a884;
+  background: #5ce3b6;
   position: absolute;
   bottom: -10px;
   left: -55px;

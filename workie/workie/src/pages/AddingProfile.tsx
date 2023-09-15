@@ -167,7 +167,7 @@ function AddingProfile() {
           />
 
           <button type="submit" className="letsStart__button">
-            lets start!
+            Let's start!
           </button>
         </form>
       </div>

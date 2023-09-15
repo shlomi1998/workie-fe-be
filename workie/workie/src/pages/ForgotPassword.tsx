@@ -82,7 +82,7 @@ const ForgotPassword = () => {
       </div>
 
       <div className="wrapsTemporaryPassword">
-        <h2 className="wrapsTemporaryPassword__title">Forgot password ?</h2>
+        <h2 className="wrapsTemporaryPassword__title a">Forgot password?</h2>
         <p className="wrapsTemporaryPassword__paragraph">
           Enter an email to receive a temporary password
         </p>

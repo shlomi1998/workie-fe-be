@@ -35,10 +35,10 @@ export const create_open_conversation = async (req: any, res: any) => {
       return res.json(existed_conversation);
     }
 
-    let receiver_user: any = await findUser(receiver_id);
+    // let receiver_user: any = await findUser(receiver_id);
     let convoData = {
-      name: `${receiver_user.firstName} ${receiver_user.lastName}`,
-      picture:receiver_user.ImageSource,
+      name: `conversation name`,
+      picture:"conversation picture ",
       isGroup: false,
       users: [sender_id, receiver_id],
     };
@@ -57,9 +57,9 @@ export const create_open_conversation = async (req: any, res: any) => {
 export const getConversations = async (req: any, res: any, next: any) => {
   try {
     const user_id = req.user.userId;
-    if (user_id) {
-      console.log(req.user.userId);
-    }
+    // if (user_id) {
+    //   console.log(req.user.userId);
+    // }
     const conversations = await getUserConversations(user_id);
     res.status(200).json(conversations);
   } catch (error) {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import Message from "./Message";
 import { TraingleIcon } from "../../../../../svg";
@@ -6,10 +6,16 @@ import { TraingleIcon } from "../../../../../svg";
 export default function ChatMessages() {
   const { messages } = useSelector((state: any) => state.chat);
   const { user } = useSelector((state: any) => state.user);
- 
-  return (
+  const endRef: any = useRef();
+ useEffect(() => {
+    scrollToUserBottom();
+  }, [messages]);
+  const scrollToUserBottom = () => {
+    endRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  return ( 
     <div
-      className="mb-[60px] bg-[url('https://res.cloudinary.com/dmhcnhtng/image/upload/v1677358270/Untitled-1_copy_rpx8yb.jpg')]
+      className="mb-[60px] bg-[url('https://petbest.co.il/wp-content/uploads/2021/01/%D7%97%D7%AA%D7%95%D7%9C-%D7%A1%D7%99%D7%91%D7%99%D7%A8%D7%99.jpg')]
     bg-cover bg-no-repeat
     "
     >
@@ -22,7 +28,7 @@ export default function ChatMessages() {
               me={user.id === message.sender._id}
             />
           ))}
-          
+        <div className="mt-2" ref={endRef}></div>
       </div>
     </div>
   );

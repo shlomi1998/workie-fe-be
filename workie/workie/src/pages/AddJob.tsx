@@ -49,7 +49,7 @@ const AddJob = () => {
       <div className="wrapsAddJob">
         <form onSubmit={handleSubmit} className="wrapsAddJob__from">
           <label className="wrapsAddJob__from__label">
-            The details of the shift{" "}
+            Job details {" "}
           </label>
           <input
             required
@@ -114,7 +114,7 @@ const AddJob = () => {
             onChange={handleChange}
           />
           <button className="wrapsAddJob__from__submit" type="submit">
-            Post a job <i className="fa-solid fa-arrow-left icon"></i>
+            Publish Job <i className="fa-solid fa-arrow-left icon"></i>
           </button>
         </form>
       </div>

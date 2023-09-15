@@ -50,6 +50,7 @@ export const open_create_conversation = createAsyncThunk(
           },
         }
       );
+      // console.log('data',data )
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response.data.error.message);
@@ -66,6 +67,7 @@ export const getConversationMessages = createAsyncThunk(
           Authorization: `Bearer ${token}`,
         },
       });
+      // console.log(data)
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response.data.error.message);
@@ -105,6 +107,25 @@ export const chatSlice = createSlice({
       // Consider defining a type for action payload
       state.activeConversation = action.payload;
     },
+    
+    updateMessagesAndConversations: (state:any, action:any) => {
+      //update messages
+      let convo = state.activeConversation;
+      if (convo._id === action.payload.conversation._id) {
+        state.messages = [...state.messages, action.payload];
+      }
+      //update conversations
+      let conversation = {
+        ...action.payload.conversation,
+        latestMessage: action.payload,
+      };
+      let newConvos = [...state.conversations].filter(
+        (c) => c._id !== conversation._id
+      );
+      newConvos.unshift(conversation);
+      state.conversations = newConvos;
+    },
+
   },
   extraReducers(builder) {
     builder
@@ -152,17 +173,17 @@ export const chatSlice = createSlice({
           latestMessage: action.payload,
         };
         let newConvos = [...state.conversations].filter(
-          (c: any) => c._id !== conversation._id
+          (c) => c._id !== conversation._id
         );
-        newConvos.unshift(conversation)
-        state.conversations=newConvos
+        newConvos.unshift(conversation);
+        state.conversations = newConvos;
       })
-      .addCase(sendMessage.rejected, (state: any, action) => {
+      .addCase(sendMessage.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.payload;
       });
   },
 });
 
-export const { setActiveConversation } = chatSlice.actions;
+export const { setActiveConversation , updateMessagesAndConversations} = chatSlice.actions;
 export default chatSlice.reducer;

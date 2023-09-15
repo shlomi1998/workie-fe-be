@@ -116,7 +116,7 @@ const EditProfile = () => {
   return (
     <div className="wrapsEditProfile">
       <div className="wrapsEditProfile__navBar">
-        <span className="wrapsEditProfile__navBar__title">my profile</span>
+        <span className="wrapsEditProfile__navBar__title">My profile</span>
       </div>
 
       <div className="wrapsEditProfile__newDetails">
@@ -142,21 +142,21 @@ const EditProfile = () => {
 
           <br />
           <input
-            placeholder="first name "
+            placeholder="First name "
             name="firstName"
             required
             className="wrapsEditProfile__newDetails__firstName"
             type="text"
           />
           <input
-            placeholder="last name "
+            placeholder="Last name "
             name="lastName"
             required
             className="wrapsEditProfile__newDetails__lastName"
             type="text"
           />
           <input
-            placeholder="cell phone number"
+            placeholder="Phone number"
             name="CellPhoneNumber"
             required
             className="wrapsEditProfile__newDetails__cellPhoneNumber"
@@ -167,7 +167,7 @@ const EditProfile = () => {
             className="wrapsEditProfile__newDetails__email"
             name="email"
             type="email"
-            placeholder="email"
+            placeholder="Email"
           />
           <input
             name="date"
@@ -201,7 +201,7 @@ const EditProfile = () => {
             required
             name="status"
             className="wrapsEditProfile__newDetails__status"
-            placeholder="Job Description"
+            placeholder="Job description"
             rows={6}
             cols={40}
           />

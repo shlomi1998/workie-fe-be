@@ -2,8 +2,8 @@ export default function PollIcon() {
   return (
     <svg
       viewBox="0 0 53 53"
-      height="43"
-      width="43"
+      height="39"
+      width="39"
       preserveAspectRatio="xMidYMid meet"
       class=""
       fill="none"
