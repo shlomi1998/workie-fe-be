@@ -11,7 +11,7 @@ export default function Notifications() {
             <NotificationIcon className="dark:fill-blue_1 " />
           </div>
           <div className="flex flex-col">
-            <span className="textPrimary">Get notified of new messages</span>
+            <span className="textPrimary ">Get notified of new messages</span>
             <span className="textSecondary mt-0.5 flex items-center gap-0.5">
               Turn on desktop notifications
               <ArrowIcon className="dark:fill-dark_svg_2 mt-1" />

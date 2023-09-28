@@ -10,7 +10,7 @@ import {
 export default function Menu() {
   const [show, setShow] = useState(false);
   return (
-    <ul className="absolute bottom-14 openEmojiAnimation  -left-12">
+    <ul className="list-none absolute bottom-14 openEmojiAnimation  -left-12">
       <li>
         <button type="button" className="rounded-full bg-[#02A698] border-0">
           <PollIcon />

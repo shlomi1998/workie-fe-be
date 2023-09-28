@@ -74,7 +74,7 @@ const Conversation: React.FC<ConversationProps> = ({
     console.log("user:", user, "convoUser:", users);
     if (!user || !user.user || !users  || users.length < 2) return "";
     const userId:any = user.user.id;
-    // console.log(userId);
+    // console.log(userId); b
     // console.log(users[0]._id)
     // console.log(users[1].firstName)
     // console.log(users[0].firstName)

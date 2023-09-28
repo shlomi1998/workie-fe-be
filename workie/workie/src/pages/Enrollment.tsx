@@ -186,7 +186,6 @@ function Enrollment() {
   return (
     <>
       <TitleAnt />
-
       <div className="wraps">
         <div className="RegistrationEnvelope">
           <h1 className="enrollment">registration</h1>

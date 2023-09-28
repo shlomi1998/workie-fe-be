@@ -179,7 +179,7 @@ const EmployerProfile = () => {
           {userDetails.firstName} {userDetails.lastName}
         </p>
         <div className="EmployerProfile__details__w">
-          <p className="EmployerProfile__details__w__rating">3.5</p>
+          <p className="EmployerProfile__details__w__rating">4.8</p>
           <AiFillStar className="EmployerProfile__details__w__iconStar">
             {" "}
           </AiFillStar>
